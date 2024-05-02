@@ -4,7 +4,7 @@ import lombok.Getter;
 
 import java.util.Optional;
 
-public class HomeworkOptionalFeature {
+public class HomeworkOptional {
     public static void main(String[] args) {
 
         // 1. Introduction à Optional (5 minutes)
@@ -18,14 +18,14 @@ public class HomeworkOptionalFeature {
         // 2. Création et Utilisation de Base (10 minutes)
         //    - Créer des instances de Optional :
         //      Optional.empty()
-        final Optional<Object> optionalInstance = Optional.empty();
+        final Optional<Object> emptyOptional = Optional.empty();
 
         //    - Optional.of(value)
         final Optional<String> stringOptional = Optional.of("hello world");
 
         //    - Optional.ofNullable(value)
         Object myNullObject = null;
-        final Optional<Object> myNullableObjectOptional = Optional.ofNullable(myNullObject);
+        final Optional<Object> nullableObjectOptional = Optional.ofNullable(myNullObject);
     }
 
     // 3. Méthodes de base pour extraire et manipuler les valeurs :
