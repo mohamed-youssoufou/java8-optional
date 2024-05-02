@@ -1,6 +1,7 @@
 package fr.harington;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Optional;
 
@@ -42,9 +43,11 @@ public class Main {
     //       Utiliser map() et flatMap() pour transformer des Optional contenant des types
     //       complexes (ex : Optional<Person> où Person peut avoir un Optional<Address>).
     @Getter
-    class Person { private Optional<Address> address;}
+    @RequiredArgsConstructor
+    public static class Person { private final Optional<Address> address;}
     @Getter
-    class Address { private String name; }
+    @RequiredArgsConstructor
+    public static class Address { private final String name; }
 
 
     public String getPersonAddressNameOrGetUnknown(Person person){
@@ -65,7 +68,7 @@ public class Main {
     //      - Exercice 4 : Composition avec filter() :
     //        Créer une méthode qui utilise filter() pour vérifier une condition sur la valeur encapsulée
     //        et retourne un message approprié.
-    public static String filterAndGetMessageOrGetDefaultMessage(Optional<Double> optionalValue) {
+    public String filterAndGetMessageOrGetDefaultMessage(Optional<Double> optionalValue) {
         return optionalValue.filter(value -> value > 0)
                 .map(value -> "Valid value: " + value)
                 .orElse("Invalid value given");
