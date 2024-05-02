@@ -43,9 +43,9 @@ class MainTest {
 
         @Test
         void givenOptionalValidDouble_whenFilterAndGetMessageOrGetDefaultMessage_thenReturnGoodValue() {
-            final Optional<Double> givenvalue = Optional.of(12d);
+            final Optional<Double> givenValue = Optional.of(12d);
             final String expectedMessage = "Valid value: 12.0";
-            assertEquals(expectedMessage, main.filterAndGetMessageOrGetDefaultMessage(givenvalue));
+            assertEquals(expectedMessage, main.filterAndGetMessageOrGetDefaultMessage(givenValue));
         }
 
         @Test
