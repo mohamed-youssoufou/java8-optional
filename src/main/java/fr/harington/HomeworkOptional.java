@@ -25,7 +25,7 @@ public class HomeworkOptional {
 
         //    - Optional.ofNullable(value)
         Object myNullObject = null;
-        final Optional<Object> nullableObjectOptional = Optional.ofNullable(myNullObject);
+        final Optional<Object> nullObjectOptional = Optional.ofNullable(myNullObject);
     }
 
     // 3. Méthodes de base pour extraire et manipuler les valeurs :
